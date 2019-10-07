@@ -24,7 +24,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://blazeweed.servebeer.com:4554/fritze/node-express-mongoose-starter.git"
+    "url": "git+https://github.com/wattafot/create-express-api.git"
   },
+  "bugs": {
+    "url": "https://github.com/wattafot/create-express-api/issues"
+  },
+  "homepage": "https://github.com/wattafot/create-express-api#readme",
   "description": ""
 }
