@@ -9,7 +9,7 @@ Installation is done using the npm install command:
 
 # Usage
 
-`create-express-api new-project
- cd new-project
-`
+`create-express-api new-project`
+`cd new-project`
+
 
