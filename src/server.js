@@ -7,7 +7,7 @@ try {
   const https = require('https')
   const { connectMongoose, disconnectMongoose } = require('./tools/mongoose.js')
   
-  const API_PORT = process.env.API_PORT 
+  const API_PORT = process.env.API_PORT || 3000
 
   // you need to have the environment variables set for this!
   // connectMongoose()
@@ -23,7 +23,7 @@ try {
   // })
 
   const server = app.listen(API_PORT, function() {
-    console.log(`listening on port ${API_PORT || 3000}`)
+    console.log(`listening on port ${API_PORT}`)
   })
 }
 catch (err) {
