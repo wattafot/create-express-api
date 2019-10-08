@@ -22,6 +22,7 @@ or just to save other stuff.
 
 I used .dotenv for development.
 Just add a ```.env``` file in your root project folder and store your variables in there.
+
 ```
 API_PORT=$PORT
 API_NAME=$API_NAME
