@@ -6,22 +6,8 @@ const userSchema = new Schema({
   user_id: Number,
   pass: { type: String, required: true},
   email: { type: String, required: true},
-  challenges: [],
-  friends: [],
-  level: Number,
-  exp: Number,
-  reg_date: Number,
-  hearts: []
+  reg_date: Number
 })
-
-
-const MANDATORY_CREATE_PARAMS = [
-  'user', 'pass', 'email',
-]
-
-const VALID_CREATE_PARAMS =  [
-  'user', 'pass', 'email'
-]
 
 const User = mongoose.model('users', userSchema)
 

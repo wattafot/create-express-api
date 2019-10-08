@@ -23,7 +23,7 @@ try {
   // })
 
   const server = app.listen(API_PORT, function() {
-    console.log(`listening on port ${API_PORT}`)
+    console.log(`listening on port ${API_PORT || 3000}`)
   })
 }
 catch (err) {
