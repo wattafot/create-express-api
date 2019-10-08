@@ -18,7 +18,7 @@ $ npm start
 # ENV
 
 You can add variables to the Environment variables to get access to your DB
-or just saving other stuff.
+or just to save other stuff.
 
 I used .dotenv for development.
 Just add a ```.env``` file in your root project folder and store your variables in there.
