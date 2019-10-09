@@ -3,6 +3,7 @@
 const fs = require('fs')
 const CURR_DIR = process.cwd()
 const ncp = require('ncp').ncp
+const tree = require('tree-node-cli')
 
 const createDir = async (path, newProjectPath) => {
 	const filesToCreate = fs.readdirSync(path).filter(item => {
@@ -14,7 +15,8 @@ const createDir = async (path, newProjectPath) => {
 	const result = await mkdir(destination)
 	
 	const source = CURR_DIR
-	const copyNodeModules = await copyDir({ source: `${path}/node_modules`, destination: destination + '/node_modules' })
+
+	const copyNodeModules = await copyDir({source: `${path}/node_modules`, destination: destination + '/node_modules'})
 	const copySrc = await copyDir({ source: `${path}/src`, destination: destination + '/src'})
 	for (const file of filesToCreate) {
 		await copyDir({ source: `${path}/${file}`, destination: `${destination}/${file}`})
@@ -59,5 +61,16 @@ if (projectName === void 0 || projectName === '') {
 	process.exit()
 }
 
-createDir(path, projectName)
-console.log(`${projectName} was successfully created\nrun\ncd ${projectName} && npm start`)
+(async () => {
+	await createDir(path, projectName)
+	console.log(`${projectName} was successfully created`)
+	console.log(`${CURR_DIR}/${projectName}`)
+	const structure = tree(`${CURR_DIR}/${projectName}`, {
+		allFiles: true,
+	  exclude: [/node_modules/],
+	  maxDepth: 4
+	})
+	console.log(structure)
+	console.log(`\nstart api with -> cd ${projectName} && npm start`)
+})()
+

@@ -2,6 +2,7 @@
 
 # Installation
 This is a Node.js module available through the npm registry.
+This Module will scaffold a basic REST API (Node-Express-Mongoose) for you.
 
 Installation is done using the npm install command:
 
@@ -15,6 +16,28 @@ $ create-express-api new-project
 $ cd new-project
 $ npm start
 ```
+
+# STRUCTURE
+
+```
+new-project
+├── package.json
+└── src
+    ├── App.js
+    ├── models
+    │   └── User.js
+    ├── modules
+    │   └── users.module.js
+    ├── routes
+    │   └── users.router.js
+    ├── server.js
+    └── tools
+        └── mongoose.js
+```
+start api with -> cd new-project && npm start
+
+
+
 # ENV
 
 You can add variables to the Environment variables to get access to your DB
@@ -32,4 +55,5 @@ MONGO_DB=$MONGO_DB
 MONGO_USER=$MONGO_USER
 MONGO_PASS=$MONGO_PASS
 ```
+
 
