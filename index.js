@@ -14,7 +14,7 @@ const createDir = async (path, newProjectPath) => {
 	const result = await mkdir(destination)
 	
 	const source = CURR_DIR
-	const copyNodeModules = await copyDir({source: `${path}/node_modules`, destination: destination + '/node_modules'})
+	const copyNodeModules = await copyDir({ source: `${path}/node_modules`, destination: destination + '/node_modules' })
 	const copySrc = await copyDir({ source: `${path}/src`, destination: destination + '/src'})
 	for (const file of filesToCreate) {
 		await copyDir({ source: `${path}/${file}`, destination: `${destination}/${file}`})

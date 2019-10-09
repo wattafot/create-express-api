@@ -10,8 +10,9 @@ app.use(cors({
 }))
 
 app.use(cookieParser())
+
 app.get('/', function(req, res) {
-  res.send(`${process.env.API_NAME}`)
+  res.send('hi')
 })
 
 app.use('/user', Users)
