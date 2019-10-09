@@ -27,5 +27,6 @@
     "type": "git",
     "url": "git+https://github.com/wattafot/create-express-api.git"
   },
-  "description": ""
+  "description": "",
+  "keywords": ["express", "api", "rest-api", "nodejs", "node", "express-starter", "api-starter", "express-mongoose"]
 }

@@ -11,11 +11,9 @@ const createDir = async (path, newProjectPath) => {
 		return item.match(copy) !== null
 	})
 	const destination = `${CURR_DIR}/${newProjectPath}`
-
 	const result = await mkdir(destination)
-	
 	const source = CURR_DIR
-
+	
 	const copyNodeModules = await copyDir({source: `${path}/node_modules`, destination: destination + '/node_modules'})
 	const copySrc = await copyDir({ source: `${path}/src`, destination: destination + '/src'})
 	for (const file of filesToCreate) {
@@ -73,4 +71,3 @@ if (projectName === void 0 || projectName === '') {
 	console.log(structure)
 	console.log(`\nstart api with -> cd ${projectName} && npm start`)
 })()
-
