@@ -1,6 +1,6 @@
 {
   "name": "@fridsn/create-express-api",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\"",
@@ -28,5 +28,14 @@
     "url": "git+https://github.com/wattafot/create-express-api.git"
   },
   "description": "",
-  "keywords": ["express", "api", "rest-api", "nodejs", "node", "express-starter", "api-starter", "express-mongoose"]
+  "keywords": [
+    "express",
+    "api",
+    "rest-api",
+    "nodejs",
+    "node",
+    "express-starter",
+    "api-starter",
+    "express-mongoose"
+  ]
 }
