@@ -17,7 +17,7 @@ $ cd new-project
 $ npm start
 ```
 
-# STRUCTURE
+# Structure
 
 ```
 new-project
@@ -34,9 +34,12 @@ new-project
     └── tools
         └── mongoose.js
 ```
-start api with -> cd new-project && npm start
 
+```bin
 
+$ cd new-project && npm start
+
+```
 
 # ENV
 
